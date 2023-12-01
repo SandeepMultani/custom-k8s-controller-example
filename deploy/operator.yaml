@@ -55,28 +55,28 @@ spec:
       serviceAccountName: datastore-operator-sa
       containers:
         - name: datastore-operator
-          image: sandeepmultani/datastore-operator:0.0.3
+          image: sandeepmultani/datastore-operator:0.1.2
           imagePullPolicy: IfNotPresent
           resources:
             limits:
               cpu: 100m
-              memory: 128Mi
+              memory: 1024Mi
             requests:
               cpu: 100m
-              memory: 64Mi
-          env:
-            - name: WATCH_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
-            - name: LOG_LEVEL
-              value: "debug"
-            - name: RETRY_MAX_ATTEMPTS
-              value: "3"
-            - name: RETRY_INITIAL_DELAY
-              value: "5000"
-            - name: RETRY_DELAY_MULTIPLIER
-              value: "1.5"
+              memory: 256Mi
+          # env:
+          #   - name: WATCH_NAMESPACE
+          #     valueFrom:
+          #       fieldRef:
+          #         fieldPath: metadata.namespace
+          #   - name: LOG_LEVEL
+          #     value: "debug"
+          #   - name: RETRY_MAX_ATTEMPTS
+          #     value: "3"
+          #   - name: RETRY_INITIAL_DELAY
+          #     value: "5000"
+          #   - name: RETRY_DELAY_MULTIPLIER
+          #     value: "1.5"
       terminationGracePeriodSeconds: 10          
 
 ---

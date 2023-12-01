@@ -1,10 +1,9 @@
 apiVersion: sandeepmultani.github.io/v1
 kind: Datastore
 metadata:
-  name: mysql-datastore-03
-  namespace: datastore-ns
+  name: mongp-datastore-03
+  namespace: default
 spec:
-  image: "mysql:8.0"
-  database: mysql-db-03
+  image: "mongp:5.0"
+  database: mongp-db-03
   port: 3306
-  rootPasswordSecretName: mysql-datastore-03-secret
