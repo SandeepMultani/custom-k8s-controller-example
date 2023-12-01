@@ -1,0 +1,10 @@
+apiVersion: sandeepmultani.github.io/v1
+kind: Datastore
+metadata:
+  name: mysql-datastore-02
+  namespace: datastore-ns
+spec:
+  image: "mysql:8.0"
+  database: mysql-db-02
+  port: 3306
+  rootPasswordSecretName: mysql-datastore-02-secret

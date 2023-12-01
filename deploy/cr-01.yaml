@@ -1,0 +1,9 @@
+apiVersion: sandeepmultani.github.io/v1
+kind: Datastore
+metadata:
+  name: mysql-datastore-01
+  namespace: default
+spec:
+  image: "mysql:8.0"
+  database: mysql-db-01
+  port: 3306
