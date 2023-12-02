@@ -55,15 +55,15 @@ spec:
       serviceAccountName: datastore-operator-sa
       containers:
         - name: datastore-operator
-          image: sandeepmultani/datastore-operator:0.1.2
+          image: sandeepmultani/datastore-operator:0.2.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:
               cpu: 100m
-              memory: 1024Mi
+              memory: 512Mi
             requests:
               cpu: 100m
-              memory: 256Mi
+              memory: 128Mi
           # env:
           #   - name: WATCH_NAMESPACE
           #     valueFrom:

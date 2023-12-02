@@ -1,0 +1,9 @@
+apiVersion: sandeepmultani.github.io/v1
+kind: Car
+metadata:
+  name: volvo
+  namespace: default
+spec:
+  color: blue
+  gearbox: manual
+  model: 2019

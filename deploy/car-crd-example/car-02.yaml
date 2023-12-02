@@ -1,0 +1,9 @@
+apiVersion: sandeepmultani.github.io/v1
+kind: Car
+metadata:
+  name: audi
+  namespace: default
+spec:
+  color: grey
+  gearbox: manual
+  model: 2014
