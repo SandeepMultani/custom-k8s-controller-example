@@ -27,8 +27,8 @@ public static class Program
 
         var datastoreHandler = new DatastoreHandler();
         var controller = new Controller<DatastoreCrd>(
-            new Kubernetes(KubernetesClientConfiguration.BuildConfigFromConfigFile()),
-            //new Kubernetes(KubernetesClientConfiguration.InClusterConfig()),
+            //new Kubernetes(KubernetesClientConfiguration.BuildConfigFromConfigFile()),
+            new Kubernetes(KubernetesClientConfiguration.InClusterConfig()),
             crd,
             (WatchEventType eventType, DatastoreCrd resource) =>
                 datastoreHandler.Handle(eventType, resource));
